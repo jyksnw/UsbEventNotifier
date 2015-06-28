@@ -69,7 +69,7 @@ namespace UsbEventNotifier
 				}
 
 			} catch (Exception ex) {
-				Console.WriteLine (ex.Message);
+				throw new UsbEventNotifierException (ex.Message, ex.InnerException);
 			}
 		}
 	}
